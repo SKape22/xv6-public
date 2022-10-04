@@ -8,6 +8,10 @@ int main(int argc, char const *argv[])
     int size=getprocessmemory();
     printf(1,"Process memory is %d\n", size);
 
+    int totalsize=getTotalMemoryConsumed();
+    printf(1,"Total memory consumed %d\n",totalsize);
+    // exit();
+
     int val=34;
     val--;
     int *a=(int *)malloc(sizeof(int)*2);

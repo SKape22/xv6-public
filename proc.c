@@ -532,3 +532,17 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+int 
+getTotalMemoryConsumed(void)
+{
+  struct proc *p;
+  int mem=0;
+
+  for(p = ptable.proc; p < &ptable.proc[NPROC]; p++)
+    {
+      if (p->state !=UNUSED)    
+        mem+=p->sz;
+    }
+    return mem;
+}
