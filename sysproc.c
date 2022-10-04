@@ -96,3 +96,9 @@ sys_getprocessmemory(void)
 {
   return myproc()->sz;
 }
+
+int
+sys_getTotalMemoryConsumed(void)
+{
+  return getTotalMemoryConsumed();
+}
